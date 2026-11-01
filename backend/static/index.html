@@ -1,0 +1,27 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portal Kredensial Mikro Terverifikasi Blockchain — Prototipe</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="brand">◆ KredMikro<span>Chain</span></div><nav>
+<a href="#penerbit">Penerbit</a><a href="#dompet">Dompet Peserta</a><a href="#verifikasi">Verifikator</a><a href="#analitik">Dasbor Analitik</a></nav>
+<div id="st" class="st">menghubungkan…</div></header>
+<main>
+<section id="penerbit"><h2>Penerbitan Kredensial Mikro</h2><p class="hint">Lembaga penerbit membuat kredensial berformat W3C VC 2.0 / Open Badges 3.0; hash kredensial dijangkarkan ke smart contract.</p>
+<div class="grid"><form id="fIssue" class="card">
+<label>ID peserta (mis. surel/NIM)<input name="subject_id" value="peserta01@contoh.ac.id" required></label>
+<label>Nama peserta<input name="subject_name" value="Peserta Satu" required></label>
+<label>Nama capaian<input name="achievement" value="Kredensial Mikro: Dasar Analitik Data" required></label>
+<label>Deskripsi<textarea name="description">Peserta mampu membersihkan, menganalisis, dan memvisualisasikan data tabular.</textarea></label>
+<label>Kriteria<input name="criteria" value="Lulus 4 tugas dan proyek akhir dengan nilai ≥ 70"></label>
+<div class="row"><label>Kredit (SKS/ECTS)<input name="credits" type="number" step="0.5" value="2"></label>
+<label>ID mahasiswa OULAD (bukti analitik, opsional)<select name="oulad_student" id="selStu"><option value="">— tanpa bukti analitik —</option></select></label></div>
+<button>Terbitkan &amp; jangkarkan</button></form>
+<div class="card" style="max-height:470px;overflow:auto"><h3>Kredensial terbit</h3><table id="tCred"><thead><tr><th>Hash</th><th>Peserta</th><th>Capaian</th><th>Gas</th><th>Status</th><th></th></tr></thead><tbody></tbody></table></div></div>
+<pre id="outIssue" class="out"></pre></section>
+
+<section id="dompet"><h2>Dompet Kredensial Peserta</h2><div class="card row"><input id="wSub" value="peserta01@contoh.ac.id"><button onclick="loadWallet()">Tampilkan</button></div><div id="wList" class="wallet"></div></section>
+
+<section id="verifikasi"><h2>Verifikasi Kredensial</h2><p class="hint">Unggah berkas JSON kredensial atau buka tautan QR. Sistem memeriksa hash, tanda tangan penerbit, status penerbit, dan status pencabutan di blockchain.</p>
+<div class="card row"><input type="file" id="vFile" accept=".json"><button onclick="verifyFile()">Verifikasi berkas</button></div><div id="vRes"></div></section>
+
+<section id="analitik"><h2>Dasbor Analitik Pembelajaran</h2><div id="aBox" class="grid"></div></section>
+</main><footer>Prototipe monograf · kode MIT · data OULAD (CC BY 4.0) · bukan sistem produksi</footer>
+<script src="app.js"></script></body></html>
