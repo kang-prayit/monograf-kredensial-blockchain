@@ -1,0 +1,23 @@
+== Demo multi-lembaga (HIPOTETIS) | rpc:http://chain:8545 | chainId 31337 | registri 0x5ac3c0cbA26A92B1A5ade87E1bee590200119e45
+[1] Admin registri mendaftarkan dua penerbit contoh (kunci terpisah per lembaga)
+    Universitas Muhammadiyah Yogyakarta (contoh): 0x10A73B23001aE45005fF979D5f0a10dE9923080B | aktif=True | gas addIssuer=117117
+    ICE Institute (contoh): 0xcaCb8F0B107D1526d66C1cC2784060DaBD162b88 | aktif=True | gas addIssuer=72082
+[2] UMY (contoh) menerbitkan 1 kredensial mikro (transaksi tunggal)
+    hash 0x90968e6e897c2f8a… | gas 73392 | 13.2 ms
+[3] ICE Institute (contoh) menerbitkan 3 kredensial dalam satu batch Merkle (anchorBatchRoot)
+    akar 0x8a7184ff8967d653… | gas 48523 | bukti Merkle sah 3/3 | pemilik akar = ICE: True
+[4] Verifikasi oleh pemberi kerja (5+1 pemeriksaan)
+    UMY#1: SAH | penerbit on-chain 0x10A73B23…
+    ICE#1: SAH | penerbit on-chain 0xcaCb8F0B…
+[5] Uji lintas lembaga
+    a) ICE menerbitkan dokumen yang mengaku dari UMY -> TIDAK SAH (did_penerbit_cocok=False, tanda_tangan_sah=True)
+    b) ICE mencoba mencabut kredensial UMY -> ditolak: True (ContractLogicError)
+    c) ICE mencoba mendaftarkan penerbit (bukan admin) -> ditolak: True (ContractLogicError)
+    d) Dokumen UMY diubah nama penerimanya -> TIDAK SAH
+[6] UMY mencabut kredensialnya sendiri
+    gas revoke 49882 | verifikasi ulang -> TIDAK SAH (tidak_dicabut=False)
+    kredensial ICE#1 tetap SAH (pencabutan tidak berdampak lintas lembaga)
+[7] Penonaktifan penerbit tidak retroaktif (perbaikan deactivatedAt)
+    ICE dinonaktifkan: kredensial lama -> SAH; terbit baru ditolak: True
+    (ICE diaktifkan kembali agar demo dapat diulang)
+== selesai dalam 0.35 s; hasil: experiments/hasil/demo_multi_lembaga.json

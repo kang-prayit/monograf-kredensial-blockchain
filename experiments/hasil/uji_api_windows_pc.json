@@ -1,0 +1,21 @@
+{
+ "issue": {
+  "gas": 73392,
+  "ms": 13.3
+ },
+ "verify": {
+  "valid": true,
+  "ms": 9.22
+ },
+ "tamper": {
+  "valid": false
+ },
+ "revoke": {
+  "gas": 49654,
+  "ms": 23.1
+ },
+ "after_revoke_valid": false,
+ "web": 200,
+ "qr": "200 image/png 1082 B",
+ "analytics": true
+}

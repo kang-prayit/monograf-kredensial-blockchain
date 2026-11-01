@@ -1,0 +1,161 @@
+{
+ "meta": {
+  "tanggal": "2026-11-01 07:27:30 WIB",
+  "python": "3.13.5",
+  "os": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "chain": "eth-tester (dalam proses)",
+  "chainId": 131277322940537
+ },
+ "skenario": {
+  "S1 kredensial asli (kontrol)": {
+   "n": 20,
+   "ditolak": 0,
+   "pemeriksaan_gagal": {}
+  },
+  "S2 nama peserta diubah": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "hash_cocok_dengan_proof": 20,
+    "tercatat_di_blockchain": 20,
+    "tanda_tangan_penerbit_sah": 20,
+    "did_penerbit_cocok": 20,
+    "penerbit_aktif": 20
+   }
+  },
+  "S3 nama capaian diubah": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "hash_cocok_dengan_proof": 20,
+    "tercatat_di_blockchain": 20,
+    "tanda_tangan_penerbit_sah": 20,
+    "did_penerbit_cocok": 20,
+    "penerbit_aktif": 20
+   }
+  },
+  "S4 tanggal validFrom diubah": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "hash_cocok_dengan_proof": 20,
+    "tercatat_di_blockchain": 20,
+    "tanda_tangan_penerbit_sah": 20,
+    "did_penerbit_cocok": 20,
+    "penerbit_aktif": 20
+   }
+  },
+  "S5 SKS/creditsAvailable diubah 2->4": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "hash_cocok_dengan_proof": 20,
+    "tercatat_di_blockchain": 20,
+    "tanda_tangan_penerbit_sah": 20,
+    "did_penerbit_cocok": 20,
+    "penerbit_aktif": 20
+   }
+  },
+  "S6 deskripsi bukti analitik diubah": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "hash_cocok_dengan_proof": 20,
+    "tercatat_di_blockchain": 20,
+    "tanda_tangan_penerbit_sah": 20,
+    "did_penerbit_cocok": 20,
+    "penerbit_aktif": 20
+   }
+  },
+  "S7 nama penerbit diubah": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "hash_cocok_dengan_proof": 20,
+    "tercatat_di_blockchain": 20,
+    "tanda_tangan_penerbit_sah": 20,
+    "did_penerbit_cocok": 20,
+    "penerbit_aktif": 20
+   }
+  },
+  "S8 tanda tangan diganti tanda tangan penyerang (isi sama)": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "tanda_tangan_penerbit_sah": 20
+   }
+  },
+  "S9 proof disalin dari kredensial lain": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "hash_cocok_dengan_proof": 20,
+    "tanda_tangan_penerbit_sah": 20
+   }
+  },
+  "S10 kredensial palsu tidak terdaftar (ditandatangani penyerang)": {
+   "n": 20,
+   "ditolak": 20,
+   "pemeriksaan_gagal": {
+    "tercatat_di_blockchain": 20,
+    "tanda_tangan_penerbit_sah": 20,
+    "did_penerbit_cocok": 20,
+    "penerbit_aktif": 20
+   }
+  },
+  "S11 akun tak terdaftar memanggil issue()": {
+   "n": 20,
+   "ditolak": 20
+  },
+  "S12 akun lain mencabut kredensial penerbit": {
+   "n": 20,
+   "ditolak": 20
+  },
+  "S13 penerbitan ulang hash yang sama": {
+   "n": 20,
+   "ditolak": 20
+  },
+  "S14 penyerang memanggil deactivateIssuer()": {
+   "n": 1,
+   "ditolak": 1
+  },
+  "S15 Merkle: daun diubah": {
+   "n": 16,
+   "ditolak": 16
+  },
+  "S16 Merkle: bukti dari kelompok lain": {
+   "n": 16,
+   "ditolak": 16
+  },
+  "S17 Merkle: akar tidak dijangkarkan": {
+   "n": 16,
+   "ditolak": 16
+  },
+  "S18 Merkle: daun asli + bukti asli (kontrol)": {
+   "n": 16,
+   "diterima": 16
+  },
+  "S19 kredensial dicabut": {
+   "n": 10,
+   "ditolak": 10,
+   "pemeriksaan_gagal": {
+    "tidak_dicabut": 10
+   }
+  },
+  "S20 kredensial lain tetap sah setelah pencabutan (kontrol)": {
+   "n": 10,
+   "ditolak": 0,
+   "pemeriksaan_gagal": {}
+  },
+  "S21 penerbit dinonaktifkan admin": {
+   "n": 10,
+   "ditolak": 0,
+   "pemeriksaan_gagal": {}
+  },
+  "S22 penerbit diaktifkan kembali (kontrol)": {
+   "n": 10,
+   "ditolak": 0,
+   "pemeriksaan_gagal": {}
+  }
+ }
+}

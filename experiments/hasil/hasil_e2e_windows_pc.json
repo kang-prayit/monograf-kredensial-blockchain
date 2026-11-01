@@ -1,0 +1,70 @@
+{
+ "tanggal": "2026-11-01 00:24:50 UTC (07:24:50 WIB)",
+ "lingkungan": {
+  "python": "3.12.16",
+  "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "chain": "rpc:http://chain:8545",
+  "chainId": 31337
+ },
+ "N": 50,
+ "issue_gas": {
+  "median": 73392,
+  "p95": 73392,
+  "min": 73356,
+  "max": 73392,
+  "mean": 73387.2
+ },
+ "issue_chain_ms": {
+  "mean": 12.478,
+  "median": 12.25,
+  "p95": 13.8,
+  "min": 11.0,
+  "max": 17.4
+ },
+ "issue_e2e_ms": {
+  "mean": 34.396,
+  "median": 33.113,
+  "p95": 40.46,
+  "min": 30.438,
+  "max": 43.297
+ },
+ "verify_ms": {
+  "mean": 7.8414,
+  "median": 7.865,
+  "p95": 8.39,
+  "min": 6.91,
+  "max": 9.71
+ },
+ "verify_e2e_ms": {
+  "mean": 9.393,
+  "median": 9.367,
+  "p95": 10.268,
+  "min": 8.239,
+  "max": 12.011
+ },
+ "valid_count": 50,
+ "tamper_tests": 20,
+ "tamper_detected": 20,
+ "revoke_gas": {
+  "mean": 49783.6,
+  "median": 49786,
+  "p95": 49786,
+  "min": 49774,
+  "max": 49786
+ },
+ "revoke_ms": {
+  "mean": 29.94,
+  "median": 21.3,
+  "p95": 39.5,
+  "min": 19.1,
+  "max": 81.7
+ },
+ "revoke_detected": 10,
+ "batch_merkle_root_gas": 48523,
+ "batch_issueBatch_gas": {
+  "1": 74230,
+  "10": 520597,
+  "100": 4984434
+ },
+ "catatan": "Disalin dari keluaran experiments/run_e2e.py di kontainer monograf-app-1 pada PC Windows (data mentah per-iterasi tidak disalin)."
+}

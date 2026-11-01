@@ -1,0 +1,16 @@
+{
+ "tanggal_wib": "2026-11-01 07:24",
+ "perangkat": "PC Windows penulis",
+ "cpu": "13th Gen Intel(R) Core(TM) i7-13700KF",
+ "cores": 16,
+ "logical": 24,
+ "ram_gb": 31.8,
+ "os": "Microsoft Windows 11 Home Single Language 10.0.26300 (build 26300) 64-bit",
+ "docker": "Docker Desktop, engine 27.5.1 (linux/amd64), Compose v2.32.4-desktop.1",
+ "docker_vm": {
+  "cpus": 24,
+  "mem_bytes": 16667824128,
+  "kernel": "6.18.33.2-microsoft-standard-WSL2"
+ },
+ "container_python": "3.12.16"
+}

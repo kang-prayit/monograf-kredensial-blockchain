@@ -1,0 +1,104 @@
+{
+ "meta": {
+  "tanggal": "2026-11-01 07:27:30 WIB",
+  "python": "3.13.5",
+  "os": "Linux-6.12.94+-x86_64-with-glibc2.41",
+  "chain": "eth-tester (dalam proses)",
+  "chainId": 131277322940537
+ },
+ "vc": {
+  "@context": [
+   "https://www.w3.org/ns/credentials/v2",
+   "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "id": "urn:uuid:60679408-d42d-484d-80a7-a16e40499836",
+  "type": [
+   "VerifiableCredential",
+   "OpenBadgeCredential"
+  ],
+  "issuer": {
+   "id": "did:pkh:eip155:131277322940537:0x01877b1e08FC7b2F0054c67F43D8aCC7f9Da60FA",
+   "type": [
+    "Profile"
+   ],
+   "name": "Lembaga Contoh (Prototipe)"
+  },
+  "validFrom": "2026-11-01T00:27:30Z",
+  "name": "Kredensial Mikro: Dasar Analitik Data",
+  "credentialSubject": {
+   "id": "contoh099@contoh.ac.id",
+   "type": [
+    "AchievementSubject"
+   ],
+   "name": "Peserta contoh 99",
+   "achievement": {
+    "id": "urn:uuid:00fb4bcf-918c-49f4-826e-ec987bbc0685",
+    "type": [
+     "Achievement"
+    ],
+    "name": "Kredensial Mikro: Dasar Analitik Data",
+    "description": "Memahami dan menerapkan analitik data dasar",
+    "criteria": {
+     "narrative": "Nilai akhir >= 70 dan menyelesaikan proyek"
+    },
+    "creditsAvailable": 2.0
+   }
+  },
+  "evidence": [
+   {
+    "id": "urn:analitik:OULAD:1982166",
+    "type": [
+     "Evidence"
+    ],
+    "name": "Bukti analitik pembelajaran (prototipe)",
+    "description": "Probabilitas lulus 0.98 (model random forest, data OULAD, hari ke-60); klik VLE 2153, rerata skor 90.8."
+   }
+  ],
+  "proof": {
+   "type": "BlockchainAnchorProof-Prototipe",
+   "created": "2026-11-01T00:27:30Z",
+   "proofPurpose": "assertionMethod",
+   "verificationMethod": "did:pkh:eip155:131277322940537:0x01877b1e08FC7b2F0054c67F43D8aCC7f9Da60FA",
+   "anchor": {
+    "chainId": 131277322940537,
+    "registry": "0x25bCDDBD1e74166464bFd5b5CCeCB7fA60864E56",
+    "hash": "0xceec40d2296179b8aa2b9786008816065400f1577459e55e3aacd06a7ced9b0d"
+   },
+   "signatureValue": "0xb43085b9759cc379d45a196ef6e8a747d533733ad823cdd974a3c5e7d69ff1477bf563567bc1edb4b43d8ccf79bd4f02a1b9c2aff71ace03016b40b2321ba1c01b"
+  }
+ },
+ "canonical_len_bytes": 1089,
+ "canonical_prefix": "{\"@context\":[\"https://www.w3.org/ns/credentials/v2\",\"https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json\"],\"credentialSubject\":{\"achievement\":{\"creditsAv",
+ "hash": "0xceec40d2296179b8aa2b9786008816065400f1577459e55e3aacd06a7ced9b0d",
+ "gas": 73344,
+ "abc": "0x4e03657aea45a94fc7d47ba826c8d667c0d1e6e33a64a036ec44f58fa12d6c45",
+ "abd": "0x89cdad7dcde9f3134e66560d1ab3b86d3ed245d94000b37c7ac677278a1d2045",
+ "merkle4": {
+  "daun": {
+   "A": "0x141b145dd5013e7d55f2321a7d779d846ace2320796e10d63d0fa9b680abbfca",
+   "B": "0x4364407d2190f10c07163ab7a23eb7a6866c315c29729310c3925fa1ae34367c",
+   "C": "0x5ddef9bf52f8ab1282f3188584a4369672d7c28e05e0657c34cb74d4cd894abc",
+   "D": "0x239d072e5d78ca5a7f7bd370d27a8a2d5be1a660cb2248c2f53b0ad0ea94fe18"
+  },
+  "akar": "0x4155c0129ffd4927a7d5d020e6b54009ff966010aceb05107be361a0fec8d140",
+  "bukti_C": [
+   "0x239d072e5d78ca5a7f7bd370d27a8a2d5be1a660cb2248c2f53b0ad0ea94fe18",
+   "0x971703edfd1e5a783b1965fffd34cb2f1cae60b9724d1e2f5c782ebf3565ecea"
+  ],
+  "langkah_C": [
+   {
+    "saat_ini": "0x5ddef9bf52f8ab1282f3188584a4369672d7c28e05e0657c34cb74d4cd894abc",
+    "saudara": "0x239d072e5d78ca5a7f7bd370d27a8a2d5be1a660cb2248c2f53b0ad0ea94fe18",
+    "urutan": "saudara||saat_ini",
+    "hasil": "0x67368d9e9762d7cd964e6260a0bcd0897b57235ecb6caabbb0ef1ffcefdff3cb"
+   },
+   {
+    "saat_ini": "0x67368d9e9762d7cd964e6260a0bcd0897b57235ecb6caabbb0ef1ffcefdff3cb",
+    "saudara": "0x971703edfd1e5a783b1965fffd34cb2f1cae60b9724d1e2f5c782ebf3565ecea",
+    "urutan": "saat_ini||saudara",
+    "hasil": "0x4155c0129ffd4927a7d5d020e6b54009ff966010aceb05107be361a0fec8d140"
+   }
+  ],
+  "onchain_ok": true
+ }
+}
