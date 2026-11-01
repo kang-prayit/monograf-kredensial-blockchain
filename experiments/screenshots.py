@@ -1,0 +1,26 @@
+"""Mengambil tangkapan layar nyata prototipe (Playwright, Chromium headless)."""
+import os, json, pathlib, requests
+from playwright.sync_api import sync_playwright
+BASE = os.environ.get("BASE", "http://localhost:8000"); OUT = pathlib.Path(__file__).resolve().parents[1] / "docs" / "screenshots"; OUT.mkdir(parents=True, exist_ok=True)
+exe = os.environ.get("CHROME")
+with sync_playwright() as p:
+    b = p.chromium.launch(executable_path=exe) if exe else p.chromium.launch()
+    pg = b.new_page(viewport={"width": 1280, "height": 860}, device_scale_factor=1.5)
+    pg.goto(BASE); pg.wait_for_timeout(1500)
+    pg.select_option("#selStu", index=1)
+    pg.click("#fIssue button"); pg.wait_for_timeout(1500)
+    pg.locator("#penerbit").screenshot(path=str(OUT / "01_penerbit.png"))
+    pg.fill("#wSub", "peserta01@contoh.ac.id"); pg.click("#dompet button"); pg.wait_for_timeout(1200)
+    pg.locator("#dompet").screenshot(path=str(OUT / "02_dompet.png"))
+    w = requests.get(BASE + "/api/wallet/peserta01@contoh.ac.id").json()
+    h = w[0]["hash"]; pathlib.Path("/tmp/kred.json").write_text(json.dumps(w[0]["credential"]))
+    pg.set_input_files("#vFile", "/tmp/kred.json"); pg.click("#verifikasi button"); pg.wait_for_timeout(1000)
+    pg.locator("#verifikasi").screenshot(path=str(OUT / "03_verifikasi_sah.png"))
+    requests.post(BASE + "/api/revoke", json={"hash": h, "reason": "uji pencabutan untuk tangkapan layar"})
+    pg.click("#verifikasi button"); pg.wait_for_timeout(1000)
+    pg.locator("#verifikasi").screenshot(path=str(OUT / "04_verifikasi_dicabut.png"))
+    pg.goto(BASE + "#analitik"); pg.wait_for_timeout(1500)
+    pg.locator("#analitik").screenshot(path=str(OUT / "05_dasbor_analitik.png"))
+    pg.goto(BASE); pg.wait_for_timeout(1200); pg.screenshot(path=str(OUT / "00_beranda.png"))
+    b.close()
+print("ok")
