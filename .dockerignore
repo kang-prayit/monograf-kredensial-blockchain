@@ -1,0 +1,5 @@
+hardhat/node_modules
+data
+analytics/data
+**/__pycache__
+.venv

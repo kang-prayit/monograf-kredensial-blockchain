@@ -1,0 +1,19 @@
+# data runtime & kunci pengembangan (dibuat otomatis)
+data/*
+!data/.gitkeep
+# dataset OULAD (unduh sendiri, CC BY 4.0)
+analytics/data/*
+!analytics/data/.gitkeep
+# model besar, dibuat ulang oleh analytics/train_oulad.py
+analytics/out/model.joblib
+# Node/Hardhat
+hardhat/node_modules/
+hardhat/cache/
+hardhat/artifacts/
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+*.db
+*.log
+.env
