@@ -119,6 +119,17 @@ Tangkapan layar asli prototipe dan gambar dari buku, diperkecil untuk README.
 | <img src="docs/gambar/dasbor_analitik.jpg" width="420"><br>**Dasbor analitik.** Model prediksi capaian dini pada OULAD. | <img src="docs/gambar/linux_vs_windows.png" width="420"><br>**Linux vs Windows.** Latensi penerbitan dan verifikasi pada dua lingkungan. |
 | <img src="docs/gambar/kerangka_menyeluruh.png" width="420"><br>**Kerangka kerja menyeluruh** (Gambar 9.5 buku). | <img src="docs/gambar/model_data_vc_ob3.png" width="420"><br>**Model data VC 2.0 + Open Badges 3.0** (Gambar 2.2 buku). |
 
+## Galeri praktikum buku
+
+Gambar berikut adalah keluaran asli praktikum dan eksperimen buku yang dihasilkan oleh kode di repositori ini (notebook `notebook/` dan skrip `experiments/`), diperkecil untuk README.
+
+| | |
+|---|---|
+| <img src="docs/gambar/praktikum_bab3_merkle.png" width="420"><br>**Bab 3.** Pohon Merkle untuk penerbitan kredensial secara *batch* dan bukti keanggotaannya. | <img src="docs/gambar/praktikum_bab3_avalanche.png" width="420"><br>**Bab 3.** Efek *avalanche* keccak256: perubahan satu karakter mengubah sekitar separuh bit hash. |
+| <img src="docs/gambar/praktikum_bab5_roc.png" width="420"><br>**Bab 5.** Kurva ROC model prediksi capaian dini pada dataset OULAD (CC BY 4.0). | <img src="docs/gambar/praktikum_bab8_uji_serangan.png" width="420"><br>**Bab 8.** Matriks hasil uji skenario serangan terhadap prototipe. |
+| <img src="docs/gambar/praktikum_bab10_batch_merkle.png" width="420"><br>**Bab 10.** Biaya gas `issueBatch` dibandingkan dengan penjangkaran akar Merkle (total dan per kredensial) serta panjang bukti Merkle. | <img src="docs/gambar/praktikum_bab10_deteksi.png" width="420"><br>**Bab 10.** Deteksi kredensial asli, dipalsukan, dan dicabut pada uji ujung-ke-ujung. |
+| <img src="docs/gambar/praktikum_dompet.jpg" width="420"><br>**Prototipe.** Dompet kredensial peserta (tangkapan layar asli). | |
+
 ## Dataset dan lisensi
 
 Repositori ini **tidak** menyertakan dataset mentah. Berkas model `analytics/out/model.joblib` (±77 MB) juga tidak disertakan; jalankan `python analytics/train_oulad.py` untuk membuatnya ulang (aplikasi web tidak memerlukannya).
