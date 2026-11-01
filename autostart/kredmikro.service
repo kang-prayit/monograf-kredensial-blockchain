@@ -1,0 +1,16 @@
+# Linux systemd (pengguna). Ganti /PATH/KE/prototipe dengan lokasi folder sebenarnya.
+# Pasang:  mkdir -p ~/.config/systemd/user && cp kredmikro.service ~/.config/systemd/user/
+#          systemctl --user daemon-reload && systemctl --user enable --now kredmikro
+#          loginctl enable-linger $USER   # agar jalan saat boot tanpa login
+[Unit]
+Description=Prototipe Kredensial Mikro Blockchain
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/PATH/KE/prototipe
+ExecStart=/PATH/KE/prototipe/start.sh
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

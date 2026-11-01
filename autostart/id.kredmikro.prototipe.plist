@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- macOS launchd. Ganti /PATH/KE/prototipe. Pasang:
+     cp id.kredmikro.prototipe.plist ~/Library/LaunchAgents/
+     launchctl load ~/Library/LaunchAgents/id.kredmikro.prototipe.plist -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>id.kredmikro.prototipe</string>
+  <key>ProgramArguments</key><array><string>/bin/bash</string><string>/PATH/KE/prototipe/start.sh</string></array>
+  <key>WorkingDirectory</key><string>/PATH/KE/prototipe</string>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><false/>
+  <key>StandardOutPath</key><string>/tmp/kredmikro.log</string>
+  <key>StandardErrorPath</key><string>/tmp/kredmikro.err</string>
+</dict></plist>
