@@ -5,8 +5,10 @@
 Kode pendamping monograf **_Kredensial Mikro Terverifikasi Blockchain: Arsitektur Tepercaya Terintegrasi Analitik Pembelajaran untuk Pendidikan di Asia Tenggara_**.
 
 **Penulis:**
-1. Eko Prasetyo (Universitas Muhammadiyah Yogyakarta)
-2. Prayitno (Politeknik Negeri Semarang)
+1. Eko Prasetyo, Ph.D. (Universitas Muhammadiyah Yogyakarta)
+2. Ir. Prayitno, S.ST., M.T., Ph.D. (Politeknik Negeri Semarang)
+3. Prof. Sri Suning Kusumawardani (Departemen Teknik Elektro dan Teknologi Informasi, FT Universitas Gadjah Mada)
+4. Heri Wijayanto, Ph.D. (Jurusan Teknologi Informasi, FT Universitas Mataram)
 
 > **English summary.** This is the companion prototype for the Indonesian monograph *Blockchain-Verified Micro-Credentials*. It is a web information system (FastAPI + web3.py + SQLite + a Solidity `CredentialRegistry` contract on a local Hardhat chain). Institutions issue W3C VC 2.0 / Open Badges 3.0-style micro-credentials, sign them, and anchor their hashes on-chain (single or Merkle batch). Learners keep them in a wallet with a QR code. Verifiers check the hash, issuer signature, issuer status and revocation status. A learning-analytics dashboard trains an early-prediction model on the public OULAD dataset (CC BY 4.0), and its result can be attached as credential `evidence`. The code is for **education and research only**. It runs on a **local test chain** and is **not production software**. Code licence: MIT. The book text is not included.
 
@@ -153,10 +155,10 @@ Sitasi dataset: J. Kuzilek, M. Hlosta, dan Z. Zdrahal, "Open University Learning
 
 IEEE:
 
-> E. Prasetyo dan Prayitno, *Kredensial Mikro Terverifikasi Blockchain: Arsitektur Tepercaya Terintegrasi Analitik Pembelajaran untuk Pendidikan di Asia Tenggara* [kode sumber]. [Penerbit: PERLU DILENGKAPI], [tahun: PERLU DILENGKAPI], ISBN [PERLU DILENGKAPI]. https://github.com/kang-prayit/monograf-kredensial-blockchain
+> E. Prasetyo, Prayitno, S. S. Kusumawardani, dan H. Wijayanto, *Kredensial Mikro Terverifikasi Blockchain: Arsitektur Tepercaya Terintegrasi Analitik Pembelajaran untuk Pendidikan di Asia Tenggara* [kode sumber]. [Penerbit: PERLU DILENGKAPI], [tahun: PERLU DILENGKAPI], ISBN [PERLU DILENGKAPI]. https://github.com/kang-prayit/monograf-kredensial-blockchain
 
 Bila memakai OULAD, sitasi juga makalah dataset di atas.
 
 ## Lisensi
 
-Kode di repositori ini menggunakan lisensi **MIT** (lihat `LICENSE`), © 2026 Eko Prasetyo dan Prayitno. Naskah buku tidak disertakan di repositori ini. Lisensi MIT tidak berlaku untuk dataset OULAD.
+Kode di repositori ini menggunakan lisensi **MIT** (lihat `LICENSE`), © 2026 Eko Prasetyo, Prayitno, Sri Suning Kusumawardani, dan Heri Wijayanto. Naskah buku tidak disertakan di repositori ini. Lisensi MIT tidak berlaku untuk dataset OULAD.
