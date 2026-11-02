@@ -6,7 +6,7 @@ Kode pendamping monograf **_Kredensial Mikro Terverifikasi Blockchain: Arsitektu
 
 **Penulis:**
 1. Eko Prasetyo, Ph.D. (Universitas Muhammadiyah Yogyakarta)
-2. Ir. Prayitno, S.ST., M.T., Ph.D. (Politeknik Negeri Semarang)
+2. Assoc. Prof. Ir. Prayitno, S.ST., M.T., Ph.D. (Politeknik Negeri Semarang)
 3. Prof. Sri Suning Kusumawardani (Departemen Teknik Elektro dan Teknologi Informasi, FT Universitas Gadjah Mada)
 4. Heri Wijayanto, Ph.D. (Jurusan Teknologi Informasi, FT Universitas Mataram)
 
